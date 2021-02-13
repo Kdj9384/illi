@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import "./App.css";
+
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./routes/Home";
+import Intro from "./routes/Intro";
+import Proj from "./routes/Proj";
+import Qna from "./routes/Qna";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Navigation />
+      {/* 메인 페이지 */}
+      <Route path="/" exact={true} component={Home} />
+      {/* 기업소개 페이지 */}
+      <Route path="/illi-intro" component={Intro} />
+      {/* 프로젝트 페이지 */}
+      <Route path="/illi-proj" component={Proj} />
+      {/* 문의사항 페이지 */}
+      <Route path="/illi-qna" component={Qna} />
+      <Footer />
+    </HashRouter>
   );
 }
 
