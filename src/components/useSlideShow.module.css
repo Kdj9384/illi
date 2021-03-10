@@ -1,0 +1,66 @@
+.SliderContainer {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.SliderContainer ul {
+  margin: 0px;
+  padding: 0px;
+}
+.SliderContainer li {
+  list-style: none;
+  width: 300px;
+}
+
+.SliderContainer > button {
+  margin: 10px 20px;
+  z-index: 10;
+}
+
+.view {
+  /* position: absolute; */
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.absolutecontainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.Slider {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.Slider > li {
+  border: 1px solid black;
+  margin: 10px 20px;
+}
+
+.indicatorContainer {
+  margin-top: auto;
+
+  justify-self: end;
+}
+
+.indicators {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 50%;
+
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px;
+}

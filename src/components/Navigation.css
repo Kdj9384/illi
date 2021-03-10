@@ -1,12 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
 ul {
   padding: 0px;
   margin: 0px;
@@ -21,15 +12,19 @@ a {
   color: black;
 }
 
+.nav-button {
+  padding-bottom: 5px;
+}
+
 .nav-container {
   display: flex;
   flex-direction: row;
 
   justify-content: space-between;
 
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 110px; /* fixed! */
+
+  padding-top: 30px;
 }
 
 .nav-container-logo {
@@ -37,6 +32,7 @@ a {
 }
 
 .nav-container-navs {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -52,4 +48,23 @@ a {
 
 .nav-container-icons li {
   padding: 10px 10px;
+}
+
+.nav-bar-sub {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 38px; /* fixed! */
+}
+
+.nav-bar-sub li {
+  padding: 10px 30px; /* fixed! */
+}
+
+.nav-bar-sub li a {
+  color: gray;
+}
+
+.nav-bar-sub li a:hover {
+  color: black;
 }
