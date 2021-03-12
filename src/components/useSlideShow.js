@@ -1,6 +1,7 @@
 // 콘텐츠 인덱스 제공
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import AppCss from "./useSlideShow.module.css";
+import testimg from "../images/img.png";
 
 function StateBuilder() {
   const [state, setState] = useState(0);
@@ -8,45 +9,61 @@ function StateBuilder() {
   return { state, setState, dist, setDist };
 }
 
-function Slider({ cnt, img, id, state, maxWidth }) {
+function Slider({ cnt, img, id, state, maxWidth, viewEle }) {
+  const [ishover, setIshover] = useState(false);
+  const slideStyle = {
+    backgroundColor: "#FAFAFA",
+  };
+  const hoverStyle = {
+    backgroundColor: "white",
+  };
+
+  function SliderHover() {
+    setIshover(!ishover);
+  }
+
+  function mouseEnter(event) {
+    SliderHover();
+  }
+
   return (
     <ul className={AppCss.Slider}>
-      <li>
-        <img src={img} alt="slider images" style={maxWidth} />
-        <p>{cnt + id + state}</p>
-      </li>
-      <li>
-        <img src={img} alt="slider images" style={maxWidth} />
-        <p>{cnt + id + state}</p>
-      </li>
-      <li>
-        <img src={img} alt="slider images" style={maxWidth} />
-        <p>{cnt + id + state}</p>
+      <li
+        style={ishover ? hoverStyle : slideStyle}
+        onMouseEnter={(event) => mouseEnter(event)}
+        onMouseLeave={(event) => mouseEnter(event)}
+      >
+        <img src={testimg} alt="slider images" />
+        <p>{cnt + state}</p>
+        <p>일리소프트일리소프트일리소프트일리소프</p>
       </li>
     </ul>
   );
 }
 
 function SliderContainer() {
+  const viewEle = useRef();
+
   const sliders = [
-    { cnt: "hi", img: "" },
-    { cnt: "h2", img: "" },
-    { cnt: "h3", img: "" },
-    { cnt: "h4", img: "" },
+    { cnt: "hi", img: { testimg } },
+    { cnt: "hL", img: { testimg } },
+    { cnt: "hI", img: { testimg } },
+    { cnt: "hK", img: { testimg } },
   ];
   const indicators = [0, 1, 2, 3];
 
   const { state, setState, dist, setDist } = StateBuilder();
 
-  const viewWidth = 500;
-  const maxWidth = { width: `${viewWidth}px` };
+  const viewWidth = 100;
+  const viewSize = { width: `${100}%` };
+  const maxWidth = { width: `${0.3}rem` };
 
   const indicators_style = {
     backgroundColor: "black",
   };
   const styles = {
     transform: `translate(${dist}px, 0px)`,
-    transition: "0.23s",
+    transition: "0.3s",
   };
 
   function AniFunc(cdist, cstate) {
@@ -64,9 +81,11 @@ function SliderContainer() {
 
   return (
     <div className={AppCss.SliderContainer}>
-      <button onClick={() => AniFunc(viewWidth, -1)}>prev</button>
+      <button onClick={() => AniFunc(viewEle.current.offsetWidth, -1)}>
+        prev
+      </button>
 
-      <div className={AppCss.view} style={maxWidth}>
+      <div className={AppCss.view} style={viewSize} ref={viewEle}>
         <div className={AppCss.absolutecontainer} style={styles}>
           {sliders.map((slider, i) => {
             return (
@@ -76,6 +95,7 @@ function SliderContainer() {
                 id={i}
                 state={state}
                 maxWidth={maxWidth}
+                viewEle={viewEle}
               ></Slider>
             );
           })}
@@ -86,13 +106,16 @@ function SliderContainer() {
               <span
                 className={AppCss.indicators}
                 style={i === state ? indicators_style : null}
+                key={i}
               ></span>
             );
           })}
         </div>
       </div>
 
-      <button onClick={() => AniFunc(-viewWidth, 1)}>next</button>
+      <button onClick={() => AniFunc(-viewEle.current.offsetWidth, 1)}>
+        next
+      </button>
     </div>
   );
 }

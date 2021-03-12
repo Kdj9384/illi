@@ -1,0 +1,53 @@
+.hoveractionbar {
+  width: 100%;
+  height: 14vw;
+
+  border-radius: 11px;
+
+  margin: 10px 20px;
+  align-self: center;
+
+  overflow: hidden;
+
+  background-image: url("../images/teaching.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: background-position 0.4s;
+
+  position: relative;
+}
+
+.hoveractionbar:hover {
+  background-position: 0px -25px;
+}
+
+.hoveractionbar > img {
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 0.4s;
+  position: relative;
+}
+
+.hoveractionbar:hover > img {
+  opacity: 0;
+}
+
+.hoveractionbar > p {
+  margin: 0px;
+  top: 0px;
+  left: 50%;
+  position: absolute;
+
+  /* display: none; */
+
+  font-size: 40px;
+  font-family: "Black Han Sans", sans-serif;
+  color: white;
+}
+
+.hoveractionbar:hover > p {
+  display: block;
+}
