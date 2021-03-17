@@ -1,0 +1,96 @@
+.SliderContainer {
+  display: flex;
+  flex-direction: row;
+
+  height: 500px;
+}
+
+.SliderContainer > button {
+  background-color: white;
+  border: none;
+  margin: 10px 20px;
+
+  width: 60px;
+}
+
+.SliderContainer > button > img {
+  width: 30px;
+  opacity: 0.5;
+}
+.SliderContainer > button:hover > img {
+  opacity: 1;
+  /* width: 40px; */
+}
+
+.view {
+  /* position: absolute; */
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+.absolutecontainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  /* width: 100%;  */
+  height: 100%;
+}
+
+.Slider {
+  display: flex;
+  flex-direction: row;
+}
+
+.Slider > li {
+  margin: 10px 25px;
+  padding: 10px 10px;
+
+  width: 330px;
+  height: 300px; /**/
+  transition: background-color 0.3s, height 0.3s ease-out; /* 들어가는 모션*/
+
+  overflow: hidden;
+  background-color: #fafafa;
+
+  border-radius: 5%;
+}
+
+.Slider > li:hover {
+  overflow: visible;
+
+  height: 400px; /**/
+  transition: background-color 0.3s, height 0.25s ease-in; /* 펼쳐지는 모션 */
+  background-color: white;
+
+  box-shadow: 0px 2px 10px 1px #f0f0f0;
+  padding: 10px 10px;
+}
+
+.Slider > li > img {
+  /* width: 300px; */
+  /* height: 121px; */
+  border-radius: 5%;
+}
+
+.indicatorContainer {
+  margin-top: auto;
+
+  justify-self: end;
+}
+
+.indicators {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 50%;
+
+  width: 26px;
+  height: 26px;
+  margin: 5px 10px;
+}

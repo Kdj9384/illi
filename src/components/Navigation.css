@@ -1,0 +1,69 @@
+.nav-button {
+  padding-bottom: 5px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  height: 155px; /* fixed! */
+
+  padding-top: 30px;
+}
+
+.nav-container-logo {
+  font-family: "Jua", sans-serif;
+  font-size: 30px;
+}
+
+.nav-container-navs {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 20px;
+
+  width: 650px;
+}
+
+.nav-container-navs li {
+  padding: 0px 30px;
+}
+
+.nav-container-icons {
+  font-size: 28px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-container-icons li {
+  padding: 0px 10px;
+}
+
+.nav-bar-sub {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  top: 38px; /* fixed! */
+
+  width: 650px;
+}
+
+.nav-bar-sub li {
+  padding: 10px 30px;
+}
+
+.nav-bar-sub li a {
+  color: gray;
+}
+
+.nav-bar-sub li a:hover {
+  color: black;
+}

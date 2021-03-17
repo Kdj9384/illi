@@ -1,0 +1,27 @@
+.qna2-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+
+  margin: 62px 0px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.qna2-text span:first-child {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 40px;
+  text-decoration: solid underline black 4px;
+  text-underline-position: under;
+}
+
+.qna2-text span:last-child {
+  color: gray;
+}
+
+.qna2-text > p {
+  width: 900px;
+  align-self: center;
+}

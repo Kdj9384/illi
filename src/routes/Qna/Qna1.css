@@ -1,0 +1,36 @@
+.qna1-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+
+  margin: 62px 0px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.qna1-text > p {
+  width: 900px;
+  align-self: center;
+}
+
+.qna1-geo {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 30px;
+}
+
+.qna1-geo > span {
+  border-right: 3px solid black;
+}
+
+.qna1-contact {
+  display: flex;
+  flex-direction: row;
+}
+
+.qna1-contact > span {
+  border-right: 3px solid black;
+}
