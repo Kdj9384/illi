@@ -27,11 +27,15 @@ function Home() {
       <div className="home-topcard">
         <img src={illiMain} alt="Illi Main" />
       </div>
+
       <Homebutton content="일리소프트 소식"></Homebutton>
+
       <div className="home-news">
         <SlideShow></SlideShow>
       </div>
+
       <Homebutton content="진행중인 프로젝트"></Homebutton>
+
       <div className="home-proj">
         <div>
           {projData.map((data, i) => {

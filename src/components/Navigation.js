@@ -24,13 +24,13 @@ function Navigation() {
     {
       id: 2,
       cnt: "프로젝트",
-      child: ["프로젝트1", "프로젝트2", "프로젝트3"],
+      child: ["진행중인 프로젝트", "완료된 프로젝트", "기타 활동"],
       path: "illi-proj",
     },
     {
       id: 3,
       cnt: "문의사항",
-      child: ["문의사항1", "문의사항2"],
+      child: ["문의사항", "채용정보"],
       path: "illi-qna",
     },
   ];

@@ -1,22 +1,25 @@
 .SliderContainer {
-  margin-left: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 
-  height: 500px; /**/
-}
-.SliderContainer ul {
-  margin: 0px;
-  padding: 0px;
-}
-.SliderContainer li {
-  list-style: none;
+  height: 500px;
 }
 
 .SliderContainer > button {
+  background-color: white;
+  border: none;
   margin: 10px 20px;
-  z-index: 10;
+
+  width: 60px;
+}
+
+.SliderContainer > button > img {
+  width: 30px;
+  opacity: 0.5;
+}
+.SliderContainer > button:hover > img {
+  opacity: 1;
+  /* width: 40px; */
 }
 
 .view {
@@ -26,6 +29,9 @@
 
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  height: 100%;
 }
 
 .absolutecontainer {
@@ -33,21 +39,22 @@
   display: flex;
   flex-direction: row;
 
-  width: 100%; /**/
+  /* width: 100%;  */
+  height: 100%;
 }
 
 .Slider {
   display: flex;
   flex-direction: row;
-
-  width: 100%; /**/
 }
 
 .Slider > li {
-  margin: 10px 20px;
+  margin: 10px 25px;
   padding: 10px 10px;
-  max-height: 180px; /**/
-  transition: background-color 0.3s, max-height 0.3s ease-out; /* 들어가는 모션*/
+
+  width: 330px;
+  height: 300px; /**/
+  transition: background-color 0.3s, height 0.3s ease-out; /* 들어가는 모션*/
 
   overflow: hidden;
   background-color: #fafafa;
@@ -58,21 +65,17 @@
 .Slider > li:hover {
   overflow: visible;
 
-  max-height: 300px; /**/
-  transition: background-color 0.3s, max-height 0.25s ease-in; /* 펼쳐지는 모션 */
+  height: 400px; /**/
+  transition: background-color 0.3s, height 0.25s ease-in; /* 펼쳐지는 모션 */
   background-color: white;
 
   box-shadow: 0px 2px 10px 1px #f0f0f0;
-  /* filter: brightness(70%); */
-}
-
-.Slider > li:hover img {
-  /* filter: brightness(100%); */
+  padding: 10px 10px;
 }
 
 .Slider > li > img {
-  width: 141px;
-  height: 121px;
+  /* width: 300px; */
+  /* height: 121px; */
   border-radius: 5%;
 }
 
@@ -87,7 +90,7 @@
   border: 2px solid black;
   border-radius: 50%;
 
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   margin: 5px 10px;
 }

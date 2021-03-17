@@ -1,3 +1,58 @@
 .intro1 {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro1-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+
+  margin: 62px 0px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.intro1-text span:first-child {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 40px;
+  text-decoration: solid underline black 4px;
+  text-underline-position: under;
+}
+
+.intro1-text span:last-child {
+  color: gray;
+}
+
+.intro1-text > p {
+  width: 900px;
+  align-self: center;
+}
+
+.intro1-grid-container {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  row-gap: 20px;
+  column-gap: 20px;
+
+  margin-bottom: 10vh;
+
+  width: 1100px;
+  height: 1100px;
+
+  align-self: center;
+}
+
+.intro1-item {
+  border: 1.5px solid rgb(128, 104, 104);
+  border-radius: 49px;
+}
+
+.intro1-item:hover {
+  background-color: blue;
 }

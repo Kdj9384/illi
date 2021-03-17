@@ -1,0 +1,42 @@
+.proj3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj3-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+
+  margin: 62px 0px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.proj3-text span:first-child {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 40px;
+  text-decoration: solid underline black 4px;
+  text-underline-position: under;
+}
+
+.proj3-text span:last-child {
+  color: gray;
+}
+
+.proj3-text > p {
+  width: 900px;
+  align-self: center;
+}
+
+.proj3-box {
+  width: 1000px;
+  height: 700px;
+
+  background-color: lightgray;
+
+  border: 1px solid gray;
+  align-self: center;
+}
