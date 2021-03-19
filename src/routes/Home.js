@@ -1,12 +1,16 @@
 import React from "react";
-import SlideShow from "../components/useSlideShow";
+import SlideShow from "../components/SlideContainer";
 import HoverActionBar from "../components/HoverActionBar";
 import illiMain from "../images/illiMain.png";
 
+import teaching from "../images/teaching.jpg";
+import ARcontents from "../images/ARcontents.jpg";
 import "./Home.css";
+
 function Homebutton({ content }) {
   return <button>{content}</button>;
 }
+
 function Home() {
   const newsData = [
     { img: "", title: "1", contents: "11" },
@@ -38,23 +42,25 @@ function Home() {
 
       <div className="home-proj">
         <div>
-          {projData.map((data, i) => {
-            return (
-              <HoverActionBar
-                key={i}
-                width={1582}
-                height={284}
-                cnt={"일리 소프트"}
-              ></HoverActionBar>
-            );
-          })}
+          <HoverActionBar
+            cnt="AR 콘텐츠를 통한|언플러그드 학습"
+            img={teaching}
+            id="0"
+          ></HoverActionBar>
+          <HoverActionBar
+            cnt="중급자 대상|AR, VR 콘텐츠 제작 강의"
+            img={ARcontents}
+            id="1"
+          ></HoverActionBar>
+          <HoverActionBar
+            cnt="AR 콘텐츠를 통한|언플러그드 학습"
+            img={teaching}
+            id="0"
+          ></HoverActionBar>
         </div>
       </div>
     </div>
   );
 }
-
-// To Do
-//
 
 export default Home;

@@ -8,4 +8,15 @@
   margin: 0px;
 
   margin-top: 100px;
+
+  font-family: "Nanum Gothic", sans-serif;
+
+  line-height: 2;
+  letter-spacing: 0.8px;
+  word-spacing: 0.5px;
+}
+
+.footer-container img {
+  opacity: 0.5;
+  width: 200px;
 }

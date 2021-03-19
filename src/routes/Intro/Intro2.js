@@ -1,6 +1,6 @@
 import React from "react";
 import HoverActionBar from "../../components/HoverActionBar";
-import { Slider } from "../../components/useSlideShow";
+import Slider from "../../components/Slider";
 import "./Intro2.css";
 
 function Intro({ match, location }) {

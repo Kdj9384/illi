@@ -1,6 +1,6 @@
 .hoveractionbar {
   width: 100%;
-  height: 14vw;
+  /* height: 14vw; */
 
   border-radius: 11px;
 
@@ -9,17 +9,16 @@
 
   overflow: hidden;
 
-  background-image: url("../images/teaching.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position: 0px -300px;
   transition: background-position 0.3s;
 
   position: relative;
 }
 
 .hoveractionbar:hover {
-  background-position: 0px -25px;
+  background-position: 0px -325px;
 }
 
 .hoveractionbar > img {
@@ -35,11 +34,12 @@
   opacity: 0;
 }
 
-.hoveractionbar > p {
+.cnt {
   margin: 0px;
   top: 10%;
-  left: 30%;
+  left: 25%;
   position: absolute;
+  text-align: center;
 
   font-size: 60px;
   font-family: "Black Han Sans", sans-serif;
@@ -47,9 +47,146 @@
 
   opacity: 0;
   transition: opacity 0.3s;
+  width: 620px;
 }
 
-.hoveractionbar:hover > p {
+.hoveractionbar:hover > .cnt {
+  display: block;
+  opacity: 1;
+}
+
+/* HoverActionBar2 */
+
+.hoveractionbar2 {
+  width: 100%;
+  /* height: 14vw; */
+
+  border-radius: 11px;
+
+  margin-top: 5vh;
+  align-self: center;
+
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -300px;
+  transition: background-position 0.3s;
+
+  position: relative;
+}
+
+.hoveractionbar2:hover {
+  background-position: 0px -325px;
+}
+
+.hoveractionbar2 > img {
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 0.3s;
+  position: relative;
+}
+
+.hoveractionbar2:hover > img {
+  opacity: 0.5;
+}
+
+.bfcnt2 {
+  margin: 0px;
+  top: 30px;
+  left: 0;
+
+  position: absolute;
+  text-align: center;
+
+  color: white;
+  font-size: 110px;
+  font-family: "Song Myung", serif;
+
+  z-index: 10;
+}
+
+.hoveractionbar2:hover .bfcnt2 {
+  display: none;
+}
+
+.cnt2 {
+  margin: 0px;
+  top: 95px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+
+  font-size: 20px;
+  font-family: "Noto Serif KR", serif;
+  color: white;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hoveractionbar2:hover > .cnt2 {
+  display: block;
+  opacity: 1;
+}
+
+/*  */
+
+.hoveractionbar3 {
+  width: 100%;
+  /* height: 14vw; */
+
+  border-radius: 11px;
+
+  margin-top: 5vh;
+  align-self: center;
+
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -110px;
+  transition: background-position 0.3s;
+
+  position: relative;
+}
+
+.hoveractionbar3:hover {
+  background-position: 0px -85px;
+}
+
+.hoveractionbar3 > img {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 0.3s;
+  position: relative;
+}
+
+.hoveractionbar3:hover > img {
+  opacity: 0.7;
+}
+
+.cnt3 {
+  margin: 0px;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  text-align: center;
+
+  font-size: 50px;
+  font-family: "Black Han Sans", sans-serif;
+  color: white;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 620px;
+}
+
+.hoveractionbar3:hover > .cnt3 {
   display: block;
   opacity: 1;
 }

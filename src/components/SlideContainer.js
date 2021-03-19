@@ -1,25 +1,16 @@
 // 콘텐츠 인덱스 제공
 import React, { useRef, useState } from "react";
-import AppCss from "./useSlideShow.module.css";
-import testimg from "../images/img.png";
+import AppCss from "./SlideContainer.module.css";
+import testimg from "../images/haedong.jpg";
 import arrow from "../images/next.png";
+import Slider from "./Slider.js";
+
+import blackCover from "../images/blackCover.png";
 
 function StateBuilder() {
   const [state, setState] = useState(0);
   const [dist, setDist] = useState(0);
   return { state, setState, dist, setDist };
-}
-
-function Slider({ cnt, img, id, state }) {
-  return (
-    <ul className={AppCss.Slider}>
-      <li>
-        <img src={testimg} alt="slider images" />
-        <p>{cnt + state}</p>
-        <p>일리소프트일리소프트일리소프트일리소프</p>
-      </li>
-    </ul>
-  );
 }
 
 function SliderContainer() {
@@ -38,8 +29,6 @@ function SliderContainer() {
   const indicators = [0, 1, 2];
 
   const { state, setState, dist, setDist } = StateBuilder();
-
-  const viewWidth = 100;
 
   const indicators_style = {
     backgroundColor: "black",
@@ -64,7 +53,8 @@ function SliderContainer() {
 
   return (
     <div className={AppCss.SliderContainer}>
-      <button onClick={() => AniFunc(viewEle.current.offsetWidth, -1)}>
+      {/* viewEle.current.offsetWidth */}
+      <button onClick={() => AniFunc(380 * 3, -1)}>
         <img
           src={arrow}
           alt="arrow left"
@@ -92,7 +82,7 @@ function SliderContainer() {
         </div>
       </div>
 
-      <button onClick={() => AniFunc(-viewEle.current.offsetWidth, 1)}>
+      <button onClick={() => AniFunc(-380 * 3, 1)}>
         <img src={arrow} alt="arrow right" />
       </button>
     </div>

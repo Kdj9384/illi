@@ -40,19 +40,17 @@ function Navigation() {
       <div className="nav-container">
         {/* routing logo */}
         <div className="nav-container-logo">
-          <span>
-            <Link
-              className="nav-button"
-              to="/"
-              {...onHoverLogoAction}
-              onClick={(event) => {
-                changeState(nav_menu[0], event);
-                changeSubState(0);
-              }}
-            >
-              일리 소프트
-            </Link>
-          </span>
+          <Link
+            className="nav-button"
+            to="/"
+            // {...onHoverLogoAction}
+            onClick={(event) => {
+              changeState(nav_menu[0], event);
+              changeSubState(0);
+            }}
+          >
+            일리 소프트
+          </Link>
         </div>
 
         {/* main nav bar*/}
@@ -119,13 +117,19 @@ function Navigation() {
         {/* facebook icon */}
         <ul className="nav-container-icons">
           <li>
-            <i className="fab fa-facebook"></i>
+            <a href="https://www.facebook.com/iLLiSoft/">
+              <i className="fab fa-facebook"></i>
+            </a>
           </li>
           <li>
-            <i className="fab fa-facebook"></i>
+            <a href="https://www.youtube.com/channel/UC-k-dVuRwgf7OuIU5D8-54w">
+              <i className="fab fa-youtube"></i>
+            </a>
           </li>
           <li>
-            <i className="fab fa-facebook"></i>
+            <a href="https://www.instagram.com/illisoftware2020_korea/">
+              <i className="fab fa-instagram"></i>
+            </a>
           </li>
         </ul>
       </div>

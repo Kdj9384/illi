@@ -1,0 +1,94 @@
+.subProj0_2 {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.subProj0_2 span {
+  letter-spacing: 0.5px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+
+  font-size: 20px;
+
+  margin: 10px 10px;
+}
+
+.subProj0_2 span:first-of-type {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 50px;
+
+  margin-top: 100px;
+}
+
+.subProj0_2 > p {
+  letter-spacing: 0.5px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.subProj0_2 > img {
+  width: 800px;
+}
+
+hr {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#sub0_2-gray {
+  color: gray;
+  font-size: 14px;
+}
+/* .sub0_2-title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+} */
+
+.subProj0_2 span:nth-child(10) {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+
+  margin-bottom: 30px;
+}
+
+.subProj0_2 span:nth-child(16) {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+
+.subProj0_2 span:nth-child(20) {
+  margin-top: 40px;
+}
+
+.subProj0_2 span:nth-child(22) {
+  margin-top: 40px;
+}
+
+.subProj0_2 button {
+  font-family: "Jua", sans-serif;
+  font-size: 26px;
+
+  padding: 12px 20px;
+  margin-top: 50px;
+
+  border-radius: 16px;
+
+  background-color: white;
+}
+
+.subProj0_2 button:hover {
+  background-color: #6f6c6c;
+}
+
+.subProj0_2 button:hover > a {
+  color: white;
+}

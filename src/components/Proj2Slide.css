@@ -1,0 +1,137 @@
+.Proj2Slide-container {
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Proj2Slide-slide-wrapper {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.Proj2Slide-slide-wrapper > button {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: none;
+
+  cursor: pointer;
+
+  align-self: center;
+  opacity: 0.8;
+}
+
+.Proj2Slide-slide-wrapper > button:hover {
+  opacity: 1;
+}
+
+.Proj2Slide-view {
+  margin: 0px 60px;
+  width: 600px;
+  height: 440px;
+
+  overflow: hidden;
+}
+.Proj2Slide-view > div {
+  display: flex;
+  flex-direction: row;
+}
+.Proj2Slide-view img {
+  transform: translate(0px, -100px);
+  object-fit: cover;
+}
+
+.Proj2Slide-view > div > img:nth-child(2) {
+  object-fit: none;
+  transform: translate(0px, -180px);
+}
+
+.Proj2Slide-text {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.Proj2Slide-text span {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.Proj2Slide-text span:first-of-type {
+  display: block;
+
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+
+  padding: 25px 0px;
+}
+
+.Proj2Slide-text span:last-of-type {
+  padding-bottom: 55px;
+}
+
+.Proj2Slide-text button {
+  font-size: 24px;
+  border: 1px solid #707070;
+
+  border-radius: 34px;
+
+  width: 270px;
+  height: 68px;
+  background-color: white;
+
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.Proj2Slide-text button:hover {
+  background-color: #6f6c6c;
+}
+.Proj2Slide-text button:hover a {
+  color: white;
+}
+
+/*  minor slide  */
+.minorslide {
+  display: flex;
+  flex-direction: row;
+}
+
+.minorslide > button {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: none;
+
+  cursor: pointer;
+
+  align-self: center;
+  opacity: 0.8;
+}
+.minorslide > button:hover {
+  opacity: 1;
+}
+.minorslide-view {
+  margin: 0px 60px;
+  width: 600px;
+  height: 440px;
+
+  overflow: hidden;
+}
+.minorslide-view > div {
+  display: flex;
+  flex-direction: row;
+}
+.minorslide-view img {
+  transform: translate(0px, -100px);
+  object-fit: cover;
+}

@@ -1,11 +1,22 @@
 import React from "react";
-import HoverActionBar from "../../components/HoverActionBar";
+import HoverActionBar, {
+  HoverActionBar2,
+} from "../../components/HoverActionBar";
+import Proj2Slide from "../../components/Proj2Slide";
+
+import proj2 from "../../images/proj2.jpg";
 import "./Proj2.css";
 
 function Proj() {
   return (
     <div className="proj2">
-      <HoverActionBar></HoverActionBar>
+      <HoverActionBar2
+        img={proj2}
+        width="1300px"
+        height="210px"
+        bfcnt="완료된 프로젝트"
+        cnt="일리소프트에서 진행했던 프로젝트들을 확인할 수 있습니다."
+      ></HoverActionBar2>
 
       <div className="proj2-text">
         <span>일리소프트의 일리있던 이야기 </span>
@@ -18,11 +29,7 @@ function Proj() {
         </p>
       </div>
 
-      <div>
-        <div></div>
-        <div></div>
-        <button></button>
-      </div>
+      <Proj2Slide></Proj2Slide>
     </div>
   );
 }

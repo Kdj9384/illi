@@ -1,5 +1,7 @@
 .nav-button {
-  padding-bottom: 5px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .nav-container {
@@ -9,16 +11,16 @@
   justify-content: space-between;
   align-items: center;
 
-  height: 155px; /* fixed! */
+  height: 180px;
 
   padding-top: 30px;
 }
 
 .nav-container-logo {
   font-family: "Jua", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
+  /* height: 100%; */
 }
-
 .nav-container-navs {
   position: relative;
   display: flex;
@@ -27,16 +29,17 @@
 
   font-family: "Nanum Gothic", sans-serif;
   font-size: 20px;
+  font-weight: 700;
 
-  width: 650px;
+  width: 600px;
 }
 
-.nav-container-navs li {
+.nav-container-navs > li {
   padding: 0px 30px;
 }
 
 .nav-container-icons {
-  font-size: 28px;
+  /* font-size: 28px; */
   display: flex;
   flex-direction: row;
 }
@@ -45,19 +48,21 @@
   padding: 0px 10px;
 }
 
+.nav-container-icons li i {
+  font-size: 27px;
+}
+
 .nav-bar-sub {
   position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 16px;
-  top: 38px; /* fixed! */
-
-  width: 650px;
+  font-size: 18px;
+  top: 40px; /* fixed! */
 }
 
 .nav-bar-sub li {
-  padding: 10px 30px;
+  padding-left: 38px;
 }
 
 .nav-bar-sub li a {

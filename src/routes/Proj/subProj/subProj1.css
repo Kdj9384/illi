@@ -1,0 +1,55 @@
+.subProj1 {
+  display: flex;
+  flex-direction: column;
+}
+.subProj1-body {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.subProj1-body > img {
+  width: 700px;
+  margin-bottom: 100px;
+}
+
+.subProj1-body-title1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+
+  margin-top: 80px;
+  margin-bottom: 35px;
+}
+.subProj1-body-title2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 450;
+  font-size: 40px;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subProj1-body-title3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+
+  margin-bottom: 40px;
+}
+
+.subProj1-body > button {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+
+  padding: 10px 20px;
+}
+
+.subProj1-contents {
+  font-family: "Nanum Gothic", sans-serif;
+
+  font-size: 18px;
+  line-height: 1.7;
+}

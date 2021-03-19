@@ -1,14 +1,20 @@
 import React, { useEffect, useRef } from "react";
+import background from "../images/illiLogoBack.png";
 
 function useHover() {
   const element = useRef();
 
   const onHoverFunction = () => {
-    element.current.style.backgroundColor = "blue";
+    element.current.style.backgroundImage = "none";
+
+    // element.current.style.backgroundImage = `url(${background}`;
+    console.log("illi logo");
   };
 
   const leaveHoverFunction = () => {
-    element.current.style.backgroundColor = "white";
+    element.current.style.backgroundImage = `url(${background})`;
+
+    // element.current.style.backgroundImage = "none";
   };
 
   useEffect(() => {

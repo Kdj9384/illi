@@ -18,8 +18,8 @@
 .proj3-text span:first-child {
   font-family: "Black Han Sans", sans-serif;
   font-size: 40px;
-  text-decoration: solid underline black 4px;
-  text-underline-position: under;
+  /* text-decoration: solid underline black 4px;
+  text-underline-position: under; */
 }
 
 .proj3-text span:last-child {
@@ -27,8 +27,10 @@
 }
 
 .proj3-text > p {
-  width: 900px;
+  width: 1000px;
   align-self: center;
+
+  font-size: 20px;
 }
 
 .proj3-box {
