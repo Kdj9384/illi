@@ -13,8 +13,6 @@
 .qna2-text span:first-child {
   font-family: "Black Han Sans", sans-serif;
   font-size: 40px;
-  text-decoration: solid underline black 4px;
-  text-underline-position: under;
 }
 
 .qna2-text span:last-child {

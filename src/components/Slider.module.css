@@ -8,8 +8,8 @@
 .blackOverlay {
   display: inline-block;
   border-radius: 5%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .Slider > li {
@@ -21,7 +21,7 @@
   transition: background-color 0.3s, height 0.3s ease-out; /* 들어가는 모션*/
 
   overflow: hidden;
-  background-color: rgba(220, 220, 220, 1);
+  background-color: #00000005;
 
   border-radius: 5%;
 }
@@ -29,7 +29,7 @@
 .Slider > li:hover {
   overflow: visible;
 
-  height: 400px; /**/
+  height: 380px; /**/
   transition: background-color 0.3s, height 0.25s ease-in; /* 펼쳐지는 모션 */
   background-color: white;
 
@@ -45,4 +45,9 @@
   width: 100%;
   height: 190px;
   border-radius: 5%;
+}
+
+.Slider > li > p:first-of-type {
+  font-size: 30px;
+  border-bottom: 45px;
 }

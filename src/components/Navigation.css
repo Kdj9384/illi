@@ -55,10 +55,14 @@
 .nav-bar-sub {
   position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   font-size: 18px;
   top: 40px; /* fixed! */
+
+  width: 600px;
+
+  background-color: #cccccc;
 }
 
 .nav-bar-sub li {

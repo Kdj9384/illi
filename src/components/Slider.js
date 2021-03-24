@@ -9,7 +9,7 @@ function Slider({ cnt, img, id, state }) {
         <div className={AppCss.blackOverlay}>
           <img src={testimg} alt="slider images" />
         </div>
-        <p>{cnt + state}</p>
+        <p>{cnt}</p>
         <p>일리소프트일리소프트일리소프트일리소프</p>
       </li>
     </ul>

@@ -1,3 +1,16 @@
+.qna1 {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.qna1-contact,
+.qna1-geo,
+.qna1-text {
+  font-size: 18px;
+}
+
 .qna1-text {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
@@ -15,15 +28,30 @@
   align-self: center;
 }
 
+.qna1-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .qna1-geo {
   display: flex;
   flex-direction: row;
 
-  margin-bottom: 30px;
+  margin-bottom: 380px;
+}
+.qna1-geo > span:first-of-type {
+  padding-right: 20px;
+  margin-right: 20px;
+
+  border-right: 3px solid black;
+
+  text-align: right;
+  font-size: 28px;
+  font-weight: 200;
 }
 
-.qna1-geo > span {
-  border-right: 3px solid black;
+.qna1-geo > div > span {
 }
 
 .qna1-contact {
@@ -31,6 +59,38 @@
   flex-direction: row;
 }
 
-.qna1-contact > span {
+.qna1-contact > span:first-of-type {
+  padding-right: 20px;
+  margin-right: 20px;
+
   border-right: 3px solid black;
+
+  text-align: right;
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.qna1-contact > div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  font-weight: 300;
+}
+
+.qna1-contact > div > span:first-of-type::before {
+  content: "\f879";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 23px;
+  margin-right: 10px;
+}
+
+.qna1-contact > div > span:last-of-type::before {
+  content: "\f0e0";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 23px;
+  margin-right: 10px;
 }

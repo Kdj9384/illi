@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link, Redirect, useHistory, withRouter } from "react-router-dom";
-import HoverActionBar from "../../components/HoverActionBar";
+import { HoverActionBar2 } from "../../components/HoverActionBar";
 
+import illicover from "../../images/illicover.jpg";
 import "./Intro1.css";
 
 function Intro({ match, location }) {
@@ -20,7 +21,13 @@ function Intro({ match, location }) {
 
   return (
     <div className="intro1">
-      <HoverActionBar></HoverActionBar>
+      <HoverActionBar2
+        img={illicover}
+        width="1300px"
+        height="210px"
+        bfcnt="일리"
+        cnt="[명사] 어떤 면에서 그런대로 타당하다고 생각되는 이치"
+      ></HoverActionBar2>
 
       <div className="intro1-text">
         <span>일리소프트의 철학</span>

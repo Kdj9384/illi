@@ -17,14 +17,14 @@ function SliderContainer() {
   const viewEle = useRef();
 
   const sliders = [
-    { cnt: "h1", img: { testimg } },
-    { cnt: "h2", img: { testimg } },
-    { cnt: "h3", img: { testimg } },
-    { cnt: "h4", img: { testimg } },
-    { cnt: "h5", img: { testimg } },
-    { cnt: "h6", img: { testimg } },
-    { cnt: "h7", img: { testimg } },
-    { cnt: "h8", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
+    { cnt: "일리 소프트", img: { testimg } },
   ];
   const indicators = [0, 1, 2];
 

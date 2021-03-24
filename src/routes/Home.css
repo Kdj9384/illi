@@ -65,3 +65,9 @@ button:active {
 .home-proj > div:last-child {
   margin-bottom: 20vh;
 }
+
+/* .home-proj > div > a {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+} */

@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import HABcss from "./HoverActionBar.module.css";
 import blackCover from "../images/blackCover.png";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 
 function HoverActionBar({ width, height, cnt, img, style, id }) {
   return (
-    <Link to={`/illi-proj/0/${id}`}>
+    <Link to={`/illi-proj/0/${id}`} className={HABcss.navlink}>
       <div
         className={HABcss.hoveractionbar}
         style={{

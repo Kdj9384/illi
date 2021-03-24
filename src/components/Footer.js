@@ -5,7 +5,7 @@ import illiLogoBack from "../images/illiLogoBack.png";
 function Footer() {
   return (
     <footer className="footer-container">
-      <span> 5건 이상의 AR, VR, MR 외주용역 개발을 수행하였습니다. </span>
+      <span> 5건 이상의 AR, VR, MR 콘텐츠 개발을 수행하였습니다. </span>
       <span>
         <strong>illisoftofficial@gmail.com</strong>&nbsp;요청하시면 상담
         가능합니다.

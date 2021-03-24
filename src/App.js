@@ -31,9 +31,9 @@ function App() {
       <Route path="/" exact={true} component={Home}></Route>
 
       {/* 기업소개 페이지 */}
-      {/* <Route path="/illi-intro/0" component={Intro1}></Route>
+      <Route path="/illi-intro/0" component={Intro1}></Route>
       <Route path="/illi-intro/1" component={Intro2}></Route>
-      <Route path="/illi-intro/2" component={Intro3}></Route> */}
+      <Route path="/illi-intro/2" component={Intro3}></Route>
 
       {/* 프로젝트 페이지 */}
       <Route path="/illi-proj/0" exact={true} component={Proj1} />
@@ -48,8 +48,8 @@ function App() {
       <Route path="/illi-proj/0/apply-class" component={ClassAppli} />
 
       {/* 문의사항 페이지 */}
-      {/* <Route path="/illi-qna/0" component={Qna1} />
-      <Route path="/illi-qna/1" component={Qna2} /> */}
+      <Route path="/illi-qna/0" component={Qna1} />
+      <Route path="/illi-qna/1" component={Qna2} />
 
       <Footer />
     </BrowserRouter>
