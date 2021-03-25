@@ -2,3 +2,48 @@
   display: flex;
   flex-direction: column;
 }
+
+
+.proj1-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+
+  margin: 90px 0px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.proj1-text span:first-child {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 40px;
+  text-decoration: solid underline black 4px;
+  text-underline-position: under;
+}
+
+.proj1-text span:last-child {
+  color: gray;
+}
+
+.proj1-text > p {
+  width: 900px;
+  align-self: center;
+}
+
+.intro3_imgs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro3_imgs > img:first-of-type {
+  width:70%;
+  height:70%;
+}
+
+.intro3_imgs > img:last-of-type {
+  width:80%;
+  height:80;
+}

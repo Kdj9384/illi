@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Redirect, useHistory, withRouter } from "react-router-dom";
 import { HoverActionBar2 } from "../../components/HoverActionBar";
+import firebase from '../../firebase';
+import PhilBox from '../../box/imgBox';
 
 import illicover from "../../images/illicover.jpg";
 import "./Intro1.css";
 
 function Intro({ match, location }) {
+  const [philList, setPhilList] = useState();
+
   const history = useHistory();
   useEffect(() => {
     // Check Valid access
@@ -17,6 +21,18 @@ function Intro({ match, location }) {
     } else {
       console.log("Valid Way");
     }
+  }, []);
+  useEffect(() => {
+    const  philRef = firebase.database().ref('philosophy');
+    philRef.on('value', (snapshot) => {
+      const phils = snapshot.val();
+      const philList = [];
+      for(let id in phils){
+        philList.push(phils[id]);
+      }
+      console.log(philList);
+      setPhilList(philList);
+  });
   }, []);
 
   return (
@@ -42,10 +58,7 @@ function Intro({ match, location }) {
       </div>
 
       <div className="intro1-grid-container">
-        <div className="intro1-item">A</div>
-        <div className="intro1-item">B</div>
-        <div className="intro1-item">C</div>
-        <div className="intro1-item">D</div>
+        {philList ? philList.map((phils, index) => <PhilBox philCont={phils}/>) : ''}
       </div>
     </div>
   );

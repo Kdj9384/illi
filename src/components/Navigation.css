@@ -55,18 +55,26 @@
 .nav-bar-sub {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   font-size: 18px;
   top: 40px; /* fixed! */
+  /* left: 150px; */
 
   width: 600px;
+  padding: 10px;
+  /* border-top: black 2px solid; */
+}
 
-  background-color: #cccccc;
+.nav-bar-sub > div {
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-bar-sub li {
-  padding-left: 38px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .nav-bar-sub li a {

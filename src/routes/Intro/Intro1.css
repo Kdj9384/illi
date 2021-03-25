@@ -49,10 +49,28 @@
 }
 
 .intro1-item {
-  border: 1.5px solid rgb(128, 104, 104);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 49px;
 }
 
 .intro1-item:hover {
-  background-color: blue;
+  cursor:pointer;
+
+  transform:scale(1.05); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+
+  -o-transform:scale(1.05); 
+  -moz-transform:scale(1.05);
+
+  -webkit-transform:scale(1.05);
+
+
+  transition: transform .35s;  
+  -o-transition: transform .35s;
+  -moz-transition: transform .35s;
+  -webkit-transition: transform .35s;
+
+  
 }

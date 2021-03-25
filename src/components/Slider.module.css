@@ -48,6 +48,8 @@
 }
 
 .Slider > li > p:first-of-type {
-  font-size: 30px;
+  font-size: 20px;
   border-bottom: 45px;
+  margin-bottom: 50px;
 }
+

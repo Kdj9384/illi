@@ -95,22 +95,42 @@ function Navigation() {
 
           {/* rendering sub nav bar */}
           <ul className="nav-bar-sub">
+            <div >
             {stateChild.map((child, index) => {
-              return (
-                <li key={index}>
-                  <Link
-                    className="nav-button-sub"
-                    to={{
-                      pathname: `/${nav_menu[state].path}/${index}`,
-                      state: { id: index },
-                    }}
-                    onClick={() => changeSubState(index)}
-                  >
-                    {child}
-                  </Link>
-                </li>
-              );
+              if (index == 2) {
+                return (
+                  <li key={index}>
+                    <Link
+                      className="nav-button-sub"
+                      to={{
+                        pathname: `/${nav_menu[state].path}/${index}`,
+                        state: { id: index },
+                      }}
+                      onClick={() => changeSubState(index)}
+                    >
+                      {child}
+                    </Link>
+                  </li>
+                );
+              } else {
+
+                return (
+                  <li key={index}>
+                    <Link
+                      className="nav-button-sub"
+                      to={{
+                        pathname: `/${nav_menu[state].path}/${index}`,
+                        state: { id: index },
+                      }}
+                      onClick={() => changeSubState(index)}
+                    >
+                      {child}
+                    </Link>
+                  </li>
+                );
+              }
             })}
+            </div>
           </ul>
         </ul>
 

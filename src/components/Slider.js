@@ -2,15 +2,15 @@ import React from "react";
 import AppCss from "./Slider.module.css";
 import testimg from "../images/haedong.jpg";
 
-function Slider({ cnt, img, id, state }) {
+function Slider({ newsCont }) {
   return (
     <ul className={AppCss.Slider}>
       <li>
         <div className={AppCss.blackOverlay}>
-          <img src={testimg} alt="slider images" />
+          <img src={newsCont.img} alt="slider images" />
         </div>
-        <p>{cnt}</p>
-        <p>일리소프트일리소프트일리소프트일리소프</p>
+        <p className={AppCss.titleText}>{newsCont.title}</p>
+        <p className={AppCss.contentText}>{newsCont.explain}</p>
       </li>
     </ul>
   );
