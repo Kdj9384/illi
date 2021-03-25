@@ -13,7 +13,7 @@ function StateBuilder() {
   return { state, setState, dist, setDist };
 }
 
-function SliderContainer() {
+function SliderContainer({newsCont}) {
   const viewEle = useRef();
 
   const sliders = [
@@ -64,9 +64,9 @@ function SliderContainer() {
 
       <div className={AppCss.view} ref={viewEle}>
         <div className={AppCss.absolutecontainer} style={styles}>
-          {sliders.map((slider, i) => {
+          {newsCont.map((news, i) => {
             console.log(viewEle.current);
-            return <Slider {...slider} key={i} id={i} state={state}></Slider>;
+            return <Slider newsCont={news}></Slider>;
           })}
         </div>
         <div className={AppCss.indicatorContainer}>
