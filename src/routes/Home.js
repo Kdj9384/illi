@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SlideShow from "../components/SlideContainer";
 import HoverActionBar from "../components/HoverActionBar";
 import illiMain from "../images/illiMain.png";
-import firebase from '../firebase';
 
 import teaching from "../images/teaching.jpg";
 import ARcontents from "../images/ARcontents.jpg";
@@ -26,20 +25,6 @@ function Home() {
     { img: "", title: "언플러그드 학습", contents: "33" },
   ];
 
-  const [newsList, setNewsList] = useState();
-  useEffect(() => {
-    const  newsRef = firebase.database().ref('news');
-    newsRef.on('value', (snapshot) => {
-      const news = snapshot.val();
-      const newsList = [];
-      for(let id in news){
-        newsList.push(news[id]);
-      }
-      console.log(newsList);
-      setNewsList(newsList);
-  });
-  }, []);
-
   console.log("home rendering");
   return (
     <div className="home-root">
@@ -50,7 +35,7 @@ function Home() {
       <Homebutton content="일리소프트 소식"></Homebutton>
 
       <div className="home-news">
-        <SlideShow newsCont={newsList}> </SlideShow>
+        <SlideShow> </SlideShow>
       </div>
 
       <Homebutton content="진행중인 프로젝트"></Homebutton>

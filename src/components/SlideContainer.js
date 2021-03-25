@@ -1,9 +1,10 @@
 // 콘텐츠 인덱스 제공
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import AppCss from "./SlideContainer.module.css";
 import testimg from "../images/haedong.jpg";
 import arrow from "../images/next.png";
 import Slider from "./Slider.js";
+import firebase from '../firebase';
 
 import blackCover from "../images/blackCover.png";
 
@@ -13,7 +14,7 @@ function StateBuilder() {
   return { state, setState, dist, setDist };
 }
 
-function SliderContainer({newsCont}) {
+function SliderContainer({newsBox}) {
   const viewEle = useRef();
 
   const sliders = [
@@ -37,6 +38,21 @@ function SliderContainer({newsCont}) {
     transform: `translate(${dist}px, 0px)`,
     transition: "0.3s",
   };
+
+  const [newsList, setNewsList] = useState();
+  useEffect(() => {
+    const  newsRef = firebase.database().ref('news');
+    newsRef.on('value', (snapshot) => {
+      const news = snapshot.val();
+      const newsList = [];
+      for(let id in news){
+        newsList.push(news[id]);
+      }
+      console.log(newsList);
+      setNewsList(newsList);
+  });
+  }, []);
+
 
   function AniFunc(cdist, cstate) {
     if (cstate + state >= sliders.length / 3) {
@@ -64,10 +80,7 @@ function SliderContainer({newsCont}) {
 
       <div className={AppCss.view} ref={viewEle}>
         <div className={AppCss.absolutecontainer} style={styles}>
-          {newsCont.map((news, i) => {
-            console.log(viewEle.current);
-            return <Slider newsCont={news}></Slider>;
-          })}
+          {newsList ? newsList.map((news, index) => <Slider newsCont={news}/>) : ''}
         </div>
         <div className={AppCss.indicatorContainer}>
           {indicators.map((indi, i) => {
